@@ -1,0 +1,12 @@
+.heroImageContainer {
+    height: 100vh;
+    width: auto;
+}
+
+.heroGradientContainer {
+    width: 100%;
+    background-color: #36CAE8;
+    opacity: .8;
+    position: absolute;
+    transition: top .5s ease-in-out;
+}

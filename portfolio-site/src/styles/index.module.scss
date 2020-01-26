@@ -1,12 +1,44 @@
 .heroImageContainer {
     height: 100vh;
     width: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 0;
+    background-size: cover;
+    height: 100vh;
 }
 
 .heroGradientContainer {
     width: 100%;
-    background-color: #36CAE8;
-    opacity: .8;
-    position: absolute;
-    transition: top .5s ease-in-out;
+    height: 100%;
+    background-color: rgba(54, 202, 232, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+    h1 {
+        font-weight: bold;
+        font-size: 30px;
+        color: #FFF;
+        padding-bottom: 20px;
+        @media only screen and (min-width: 768px) {
+            font-size: 60px;
+            padding-bottom: 30px;
+        }
+        @media only screen and (min-width: 1440px) {
+            font-size: 90px;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: .01;
+        color: black;
+        font-weight: bold;
+        font-size: 28px;
+        @media only screen and (min-width: 768px) {
+            font-size: 35px;
+        }
+    }
 }

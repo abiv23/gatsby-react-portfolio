@@ -12,17 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import TopNav from "./top-nav/top-nav"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
-const [navVisible, setNavVisible] = useState(true);
+  const [navVisible, setNavVisible] = useState(true);
 
   return (
     <>
@@ -37,8 +28,8 @@ const [navVisible, setNavVisible] = useState(true);
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Layout

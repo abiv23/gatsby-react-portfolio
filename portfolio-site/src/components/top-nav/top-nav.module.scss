@@ -2,4 +2,12 @@
     transition: height .5s ease-in-out;
     width: 100%;
     background-color: #FFF;
+    .mobileNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            
+        }
+    }
 }

@@ -4,19 +4,18 @@ import { useStaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import styles from "../styles/index.module.scss"
+
+import Layout from "../components/layout";
+import useBreakpoints from '../components/breakpoint-manager/breakpoints';
+import SEO from "../components/seo";
+import styles from "../styles/index.module.scss";
 
 
 const IndexPage = (props) => {
 
-  let [topNavVisible, setTopNavVisible] = useState(true);
-  let [heroImgSize, setHeroImgSize] = useState('');
-
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "top-nav/continental-divide.jpg" }) {
+      file(relativePath: { eq: "home-page/continental-divide.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 4000) {
             ...GatsbyImageSharpFluid
@@ -25,6 +24,8 @@ const IndexPage = (props) => {
       }
     }
   `)
+
+  const point = useBreakpoints();
 
   // function handleSizeChange() {
   //   console.log(document.getElementsByTagName("img")[0].height);
@@ -38,6 +39,8 @@ const IndexPage = (props) => {
   //     window.removeEventListener("resize", handleSizeChange())
   //   }
   // },[]);
+
+  console.log(point)
 
 
   return (
@@ -71,16 +74,5 @@ const IndexPage = (props) => {
     </Layout>
   )
 }
-
-{/* onMouseMove={(e) => e.clientY < '50' ? setTopNavVisible(true) : setTopNavVisible(false)} */}
-        {/* <Img fluid={data.file.childImageSharp.fluid} />
-        <div className={styles.heroGradientContainer} style={{top: topNavVisible ? '50px' : '0', height: heroImgSize}}>
-        </div>
-        <div className={styles.heroText}>
-          <h1>Frontend Developer</h1>
-          <p>working hard to make websites awesome.</p>
-        </div> */}
-      
-      {/* <Link to="/page-2/">Go to page 2</Link> */}
 
 export default IndexPage

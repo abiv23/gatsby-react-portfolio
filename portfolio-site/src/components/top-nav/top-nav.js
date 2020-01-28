@@ -10,7 +10,7 @@ import useBreakpoints from '../breakpoint-manager/breakpoints';
 
 const TopNav = (props) => {
 
-  const [dropDownVisible, setDropDownVisible] = useState(false);
+  const [dropDownVisible, setDropDownVisible] = useState(true);
   const breakpoint = useBreakpoints();
 
   const Close = (props) => {
@@ -31,7 +31,7 @@ const TopNav = (props) => {
     return (
         <header>
           {breakpoint !== "desktop" &&
-            <nav style={{height: props.visible ? '50px' : '0'}} className={styles.mobileNavWrapper}>
+            <nav style={{height: '50px'}} className={styles.mobileNavWrapper}>
                 <div className={styles.mobileNavWrapper__logo} >
                   <img style={{height: "50px", width: "60px"}} src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" />
                 </div>
@@ -55,9 +55,18 @@ const TopNav = (props) => {
             </nav>
           }
           {breakpoint === "desktop" &&
-            <nav style={{height: '50px'}} className={styles.navWrapper}>
-              <div className={styles.logo}>
-                <img src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" />
+            <nav style={{height: props.visible ? '80px' : '0'}} className={styles.desktopNavWrapper}>
+              <div className={styles.desktopNavWrapper__logo}>
+                <img style={{height: "60px", width: "70px"}} src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" />
+              </div>
+              <div className={styles.desktopNavWrapper__dropDown}>
+                  <ul>
+                    <li>Projects</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>LinkedIn</li>
+                    <li>Github</li>
+                  </ul>
               </div>
             </nav>}
         </header>

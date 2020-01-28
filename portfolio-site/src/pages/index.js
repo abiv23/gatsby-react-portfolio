@@ -40,9 +40,6 @@ const IndexPage = (props) => {
   //   }
   // },[]);
 
-  console.log(point)
-
-
   return (
     <Layout >
       <SEO title="Andrew Biviano - Front End Developer &amp; Digital Marketing - Denver, CO" description="Web professional with strong background in customer acquisition and optimization. 14+ years of working with developers and developing solutions to the ecommerce conversion funnel."/>

@@ -45,11 +45,12 @@ const TopNav = (props) => {
                 </div>
                 <div className={styles.mobileNavWrapper__dropdown} style={{height: dropDownVisible ? "auto" : "-100vh", opacity: dropDownVisible ? "1" : "0"}}>
                   <ul style={{marginLeft: dropDownVisible ? "0" : "-100vw", opacity: dropDownVisible ? "1" : "0"}}>
+                    <li>Work</li>
                     <li>Projects</li>
                     <li>About</li>
-                    <li>Contact</li>
-                    <li>LinkedIn</li>
-                    <li>Github</li>
+                    <li><img src={require("../../images/top-nav/contact.svg")} />Contact</li>
+                    <li><img src={require("../../images/top-nav/linkedin.png")} /> LinkedIn</li>
+                    <li><img src={require("../../images/top-nav/github.png")} /> Github</li>
                   </ul>
                 </div>
             </nav>
@@ -57,10 +58,11 @@ const TopNav = (props) => {
           {breakpoint === "desktop" &&
             <nav style={{height: props.visible ? '80px' : '0'}} className={styles.desktopNavWrapper}>
               <div className={styles.desktopNavWrapper__logo}>
-                <img style={{height: "60px", width: "70px"}} src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" />
+                <a href="/"><img style={{height: "60px", width: "70px"}} src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" /></a>
               </div>
-              <div className={styles.desktopNavWrapper__dropDown}>
+              <div className={styles.desktopNavWrapper__sideNav}>
                   <ul>
+                    <li>Work</li>
                     <li>Projects</li>
                     <li>About</li>
                     <li>Contact</li>

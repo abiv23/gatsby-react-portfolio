@@ -1,7 +1,7 @@
 .mobileNavWrapper {
     transition: height .5s ease-in-out;
     width: 100%;
-    background-color: #FFF;
+    background-color: white;
     &__logo {
         display: flex;
         justify-content: center;
@@ -23,13 +23,21 @@
         height: auto;
         z-index: 2;
         position: absolute;
-        background-color: rgb(255, 255, 255);
+        color: white;
         ul {
             transition: margin-left .5s ease-in-out, opacity .2s ease-in;
             li {
-                padding: 10px;
+                display: flex;
+                align-items: center;
+                padding: 15px;
                 font-family: 'Raleway', 'sans-serif';
-                border-top: 1px solid #DCDCDC;
+                border: 2px solid snow;
+                background-image: linear-gradient(lightgrey, grey);
+                img {
+                    height: 20px;
+                    width: 20px;
+                    padding-right: 10px;
+                }
             }
         }
     }
@@ -42,24 +50,34 @@
         height: 100%;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
     }
-    &__dropDown {
-        width: 100%;
+    &__sideNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 45%;
         height: 80px;
         position: absolute;
-        top: 30px;
+        top: 0;
+        right: 0;
         ul {
             display: flex;
-            flex-direction: row-reverse;
+            justify-content: space-between;
             li {
+                display: flex;
+                align-items: center;
                 font-family: 'Raleway', 'sans-serif';
-                padding-right: 30px;
-                font-size: 20px;
+                padding-right: 20px;
+                padding-left: 20px;
+                font-size: 18px;
+                display: flex;
+                justify-content: center;
+                // remove below before pushing to prod
                 cursor: pointer;
             }
             li:hover {
-                color: rgb(54, 202, 232);
+                color: snow;
+                background-image: linear-gradient(lightgrey, grey);
             }
         }
     }

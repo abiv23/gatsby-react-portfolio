@@ -1,0 +1,38 @@
+footer {
+    font-family: 'Raleway', 'sans-serif';
+    color: black;
+    .letsTalk {
+        height: 100px;
+        background-image: linear-gradient(lightgrey, grey);
+        padding-left: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h5 {
+            font-size: 18px;
+        }
+        p {
+            font-weight: lighter;   
+            font-size: 12px;
+            padding-top: 10px;
+            a {
+                color: #3284FF;
+            }
+        }
+    }
+    .copyright {
+        color: black;
+        background-color: grey;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        padding-left: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+}
+

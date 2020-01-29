@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import styles from "./top-nav.module.scss";
 import useBreakpoints from '../breakpoint-manager/breakpoints';
@@ -10,7 +10,7 @@ import useBreakpoints from '../breakpoint-manager/breakpoints';
 
 const TopNav = (props) => {
 
-  const [dropDownVisible, setDropDownVisible] = useState(true);
+  const [dropDownVisible, setDropDownVisible] = useState(false);
   const breakpoint = useBreakpoints();
 
   const Close = (props) => {

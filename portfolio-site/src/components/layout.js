@@ -5,11 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react";
 
-import TopNav from "./top-nav/top-nav"
+import TopNav from "./top-nav/top-nav";
+import Footer from "./footer/footer";
 
 const Layout = ({ children }) => {
 
@@ -19,17 +18,9 @@ const Layout = ({ children }) => {
     <>
       <TopNav visible={navVisible}/>
         <main onMouseMove={(e) => e.clientY < '50' ? setNavVisible(true) : setNavVisible(false) }>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Footer />
     </>
   )
 }
-
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
 
 export default Layout

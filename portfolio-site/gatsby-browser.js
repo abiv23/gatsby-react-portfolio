@@ -5,9 +5,9 @@
  */
 
  // global reset
-import "./src/styles/global-reset.scss"
+import "./src/styles/global-reset.module.scss"
 // fonts
-import "./src/styles/fonts.scss"
+import "./src/styles/fonts.module.scss"
 
 // ie polyfill for gastsby background image
 export const onClientEntry = () => {

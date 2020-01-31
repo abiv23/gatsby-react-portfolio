@@ -41,3 +41,14 @@
         }
     }
 }
+
+.homeBody {
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway", "sans-serif";
+    &__Header {
+        font-size: 60px;
+        font-weight: bold;
+        padding: 60px 0;
+    }
+}

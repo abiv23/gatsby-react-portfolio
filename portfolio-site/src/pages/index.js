@@ -14,7 +14,7 @@ import styles from "../styles/index.module.scss";
 
 const IndexPage = (props) => {
 
-  const data = useStaticQuery(graphql`
+  const heroImage = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "home-page/continental-divide.jpg" }) {
         childImageSharp {
@@ -28,26 +28,13 @@ const IndexPage = (props) => {
 
   const breakpoint = useBreakpoints();
 
-  // function handleSizeChange() {
-  //   console.log(document.getElementsByTagName("img")[0].height);
-  //   return setHeroImgSize(document.getElementsByTagName("img")[0].height)
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleSizeChange())
-    
-  //   return () => {
-  //     window.removeEventListener("resize", handleSizeChange())
-  //   }
-  // },[]);
-
   return (
     <Layout >
       <SEO title="Andrew Biviano - Front End Developer &amp; Digital Marketing - Denver, CO" description="Web professional with strong background in customer acquisition and optimization. 14+ years of working with developers and developing solutions to the ecommerce conversion funnel."/>
         <BackgroundImage
           Tag="section"
           className={styles.heroImageContainer}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={heroImage.file.childImageSharp.fluid}
           backgroundColor={`#040e18`}
         >
           <div className={styles.heroGradientContainer}>
@@ -61,33 +48,27 @@ const IndexPage = (props) => {
         {breakpoint !=="desktop" &&
           <>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="plg-homepage.png" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="scoreboard.jpg" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="keycode.png" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="seo.png" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="retro-pie.png" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
-                imgName="plg-homepage" 
-                imgFileExt="png"
+                imgName="super-mario.jpg" 
                 headline="PorchLight Real Estate Group"
                 subText="Example of front-end development work at PLG."/>
             </>

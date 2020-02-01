@@ -27,7 +27,7 @@
             font-size: 60px;
             padding-bottom: 30px;
         }
-        @media only screen and (min-width: 1440px) {
+        @media only screen and (min-width: 1024px) {
             font-size: 90px;
         }
     }
@@ -51,4 +51,10 @@
         font-weight: bold;
         padding: 60px 0;
     }
+}
+
+.desktopCardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -57,9 +57,7 @@ const ProjectCard = (props) => {
     return (
         <div className={styles.projectCardContainer}>
             <div className={styles.projectCardContainer__card}>
-                <div className={styles.projectCardContainer__card__imageContainer}>
-                    <Img fluid={imgs.allImageSharp.edges[imgIndex].node.fluid} />
-                </div>
+                <Img fluid={imgs.allImageSharp.edges[imgIndex].node.fluid} />
                 <div className={styles.projectCardContainer__card__textContainer}>
                     <h3>{props.headline}</h3>
                     <p>{props.subText}</p>

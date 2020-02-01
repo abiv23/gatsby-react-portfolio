@@ -53,25 +53,59 @@ const IndexPage = (props) => {
                 subText="Example of front-end development work at PLG."/>
             <ProjectCard 
                 imgName="scoreboard.jpg" 
-                headline="PorchLight Real Estate Group"
-                subText="Example of front-end development work at PLG."/>
+                headline="The Moral Scoreboard"
+                subText="NFL team arrest comparison."/>
             <ProjectCard 
                 imgName="keycode.png" 
-                headline="PorchLight Real Estate Group"
-                subText="Example of front-end development work at PLG."/>
+                headline="KeyCode Translator"
+                subText="Converts a keyboard button to it's key code."/>
             <ProjectCard 
                 imgName="seo.png" 
-                headline="PorchLight Real Estate Group"
-                subText="Example of front-end development work at PLG."/>
+                headline="14+ years of consistent SEO traffic growth"
+                subText="PageSpeed, UI/UX, RankBrain and modern SEO."/>
             <ProjectCard 
                 imgName="retro-pie.png" 
-                headline="PorchLight Real Estate Group"
-                subText="Example of front-end development work at PLG."/>
+                headline="A comprehensive blast of nostalgia."
+                subText="A multi-platform videogame emulator."/>
             <ProjectCard 
                 imgName="super-mario.jpg" 
-                headline="PorchLight Real Estate Group"
-                subText="Example of front-end development work at PLG."/>
+                headline="Super Mario Super Soundboard"
+                subText="Soundboard for everyone's favorite Italian plumber Mario."/>
             </>
+          }
+          {breakpoint ==="desktop" &&
+          <>
+            <div className={styles.desktopCardContainer}>
+              <ProjectCard 
+                  imgName="plg-homepage.png" 
+                  headline="PorchLight Real Estate Group"
+                  subText="Example of front-end development work at PLG."/>
+              <ProjectCard 
+                  imgName="scoreboard.jpg" 
+                  headline="The Moral Scoreboard"
+                  subText="NFL team arrest comparison."/>
+            </div>
+            <div className={styles.desktopCardContainer}>
+              <ProjectCard 
+                  imgName="keycode.png" 
+                  headline="KeyCode Translator"
+                  subText="Converts a keyboard button to it's key code."/>
+              <ProjectCard 
+                  imgName="seo.png" 
+                  headline="14+ years of consistent SEO traffic growth"
+                  subText="PageSpeed, UI/UX, RankBrain and modern SEO."/>
+            </div> 
+            <div className={styles.desktopCardContainer}>
+              <ProjectCard 
+                  imgName="retro-pie.png" 
+                  headline="A comprehensive blast of nostalgia."
+                  subText="A multi-platform videogame emulator."/>
+              <ProjectCard 
+                  imgName="super-mario.jpg" 
+                  headline="Super Mario Super Soundboard"
+                  subText="Soundboard for everyone's favorite Italian plumber Mario."/>
+            </div>
+          </>
           }
     </Layout>
   )

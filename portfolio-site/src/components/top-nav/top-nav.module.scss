@@ -56,6 +56,7 @@
         flex-direction: row;
         justify-content: flex-end;
         width: 45%;
+        max-width: 640px;
         height: 80px;
         position: absolute;
         top: 0;
@@ -72,12 +73,11 @@
                 font-size: 18px;
                 display: flex;
                 justify-content: center;
-                // remove below before pushing to prod
                 cursor: pointer;
             }
             li:hover {
                 color: snow;
-                background-image: linear-gradient(lightgrey, grey);
+                background-color: grey;
             }
         }
     }

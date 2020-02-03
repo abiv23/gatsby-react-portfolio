@@ -28,6 +28,8 @@ const TopNav = (props) => {
     )
   }
 
+  console.log(breakpoint);
+
     return (
         <header>
           {breakpoint !== "desktop" &&

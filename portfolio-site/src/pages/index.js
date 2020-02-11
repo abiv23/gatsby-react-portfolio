@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import { useStaticQuery, graphql} from "gatsby"
-import Img from "gatsby-image"
 import BackgroundImage from 'gatsby-background-image'
 
 
@@ -26,7 +24,26 @@ const IndexPage = (props) => {
     }
   `)
 
-  const breakpoint = useBreakpoints();
+  const [brkpnt, setbrkpnt] = useState('');
+  const breakpoint = brkpnt;
+  
+
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      let width = window.innerWidth;
+      if(width < 320) {
+        setbrkpnt('iphone5');
+      } else if(width >= 320 && width < 720 ) {
+        setbrkpnt('mobile');
+      } else if(width >= 720 && width < 1024) {
+        setbrkpnt('ipad');
+      } else if(width >= 1024) {
+        setbrkpnt('desktop');
+      }
+    }
+  }, []);
+
+  console.log(brkpnt);
 
   return (
     <Layout >

@@ -36,22 +36,22 @@ const ProjectCard = (props) => {
                         }
                 `)
 
-
-    const [imgName, setImgName] = useState(props.imgName);
+    const [imgName] = useState(props.imgName);
     const [imgIndex, setImgIndex] = useState(0);
 
-     function findImageIndex() {
-        imgs.allImageSharp.edges.map((item, i)=> {
-            const imgOriginalName = item.node.fluid.originalName;
-            const indexValue = i;
-            if (imgOriginalName === imgName){
-                setImgIndex(indexValue);
-            }
-        })
-     }
-
      useEffect(() => {
+        function findImageIndex() {
+            imgs.allImageSharp.edges.map((item, i)=> {
+                const imgOriginalName = item.node.fluid.originalName;
+                const indexValue = i;
+                if (imgOriginalName === imgName){
+                    setImgIndex(indexValue);
+                }
+                return null;
+            })
+         }
          findImageIndex();
+         // eslint-disable-next-line react-hooks/exhaustive-deps
       },[]);
 
     return (

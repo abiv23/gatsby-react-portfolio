@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: ``,
+  description: `Andrew Biviano Denver Colorado Front End Developer and SEO Expert.`,
 }
 
 SEO.propTypes = {

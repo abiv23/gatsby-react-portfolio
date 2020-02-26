@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql} from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 
-
 import Layout from "../components/layout";
-import useBreakpoints from '../components/breakpoint-manager/breakpoints';
 import ProjectCard from "../components/project-card/project-card";
 import SEO from "../components/seo";
 import styles from "../styles/index.module.scss";
@@ -42,8 +40,6 @@ const IndexPage = (props) => {
       }
     }
   }, []);
-
-  console.log(brkpnt);
 
   return (
     <Layout >

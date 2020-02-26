@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 
 import styles from "./top-nav.module.scss";
-import useBreakpoints from '../breakpoint-manager/breakpoints';
-
 
 /* expected props are as follow:
     visible: boolean */
@@ -35,7 +33,7 @@ const TopNav = (props) => {
                 <div className={styles.mobileNavWrapper__logo} >
                   <img style={{height: "50px", width: "60px"}} src={require("../../images/top-nav/white-hp-logo.png")} alt="andrew biviano website logo" />
                 </div>
-                <div className={styles.mobileNavWrapper__navIconContainer} onClick={() => setDropDownVisible(!dropDownVisible) }>
+                <div className={styles.mobileNavWrapper__navIconContainer} role="navigation" onClick={() => setDropDownVisible(!dropDownVisible) }>
                   <div style={{opacity: dropDownVisible ? "0" : "1", height: dropDownVisible ? "50" : "0"}} className={styles.navIconContainer__hamburger}>
                       <Hamburger />
                   </div>
@@ -48,9 +46,9 @@ const TopNav = (props) => {
                     <li>Work</li>
                     <li>Projects</li>
                     <li>About</li>
-                    <li><img src={require("../../images/top-nav/contact.svg")} />Contact</li>
-                    <li><img src={require("../../images/top-nav/linkedin.png")} /> LinkedIn</li>
-                    <li><img src={require("../../images/top-nav/github.png")} /> Github</li>
+                    <li><img src={require("../../images/top-nav/contact.svg")} alt="contact"/>Contact</li>
+                    <li><img src={require("../../images/top-nav/linkedin.png")} alt="linkedin"/> LinkedIn</li>
+                    <li><img src={require("../../images/top-nav/github.png")} alt="github"/> Github</li>
                   </ul>
                 </div>
             </nav>
